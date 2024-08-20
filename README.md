@@ -120,6 +120,7 @@ LEFT JOIN "Data_Warehouse"."Schema_1".Table_6 RENEWAL_OPP
     ON C.SBQQ__RENEWALOPPORTUNITY__C = RENEWAL_OPP.ID
 LEFT JOIN "Data_Warehouse"."Schema_1"."Table_1" Table_1_RENEWAL_REP
         ON RENEWAL_OPP.ISR__C = Table_1_RENEWAL_REP.ID
+
 WHERE C.ENDDATE >= dateadd(month, -2, CURRENT_DATE)
   AND A.NAME NOT ILIKE '%_xxxxxxx_%'
   //and C.CNUMBER = '########'
